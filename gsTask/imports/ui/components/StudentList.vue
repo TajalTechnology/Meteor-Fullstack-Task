@@ -27,6 +27,7 @@ export default {
   },
   methods: {
     submit(event) {
+      console.log('Hit')
       event.preventDefault();
       Meteor.call("createSubject", this.name, this.bookName, (error) => {
         if (error) {
